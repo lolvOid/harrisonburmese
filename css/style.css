@@ -1,0 +1,247 @@
+@font-face{
+  font-family:"AGENCYB";
+  src:url(../fonts/AGENCYB.WOFF);
+}
+@font-face{
+  font-family:"Heidenberg";
+  src:url(../fonts/Heidenberg.woff);
+}
+@font-face{
+  font-family:"Freudian Two Demo";
+  src:url(../fonts/Freudian\ Two\ Demo.woff);
+}
+@font-face{
+  font-family:"Bobby rough soft";
+  src:url(../fonts/bobby-rough-soft.woff);
+}
+@font-face{
+  font-family:"Norwester";
+  src:url(../fonts/norwester.woff);
+}
+@font-face{
+  font-family:"Zawgyi One";
+  src:url(../fonts/ZawgyiOne2008.woff);
+}
+
+.text-white{
+  color:#f4f4f4 !important;
+}
+body{
+  background:#262626;
+  overflow-x: hidden;
+  font-family:"AGENCYB","AGENCYR","Heidenberg","Freudian Two Demo","Bobby rough soft","Norwester";
+}
+
+.nav-bg{
+  background:#262626;
+}
+.color-primary{
+  color:#d69366 !important;
+}
+
+.bg-dark{
+  background:#262626;
+}
+
+.main-title{
+  color:#d69366 !important;
+  letter-spacing:.1em;
+  font-family: serif;
+  font-size:100px;
+  font-weight:bold;
+  text-transform:uppercase;
+}
+@media(max-width:425px){
+  .main-title{
+    font-size:40px;
+    
+  }
+}
+.sub-title{
+  color:#fff;
+  letter-spacing:.25em;
+  font-family:"Freudian Two Demo";
+  font-size:30px;
+  text-align:left;
+
+}
+.text-overlay{
+  width:100vw;
+  height:100vh;
+  overflow:hidden;
+  position:absolute;
+}
+.hero-overlay{
+ width:100vw;
+  height:130vh;
+  background:#262626;
+  position:absolute;
+  opacity:.5;
+}
+
+.mm-font{
+  font-family:"Zawgyi One";
+
+}
+.hero{
+  background:url(../img/Final/HRS\ \(2\).jpg);
+  background-size:cover;
+  background-position:top;
+  background-repeat:no-repeat;
+  width:100vw;
+  /* position:relative; */
+  height:130vh;
+
+}
+@media(max-width:425px){
+  .hero-overlay,.hero{
+    height:100vh;
+  }
+}
+.bottle-showcase{
+  width:100vw;
+  height:100%;
+  overflow:hidden;
+}
+.bottle-1,.bottle-2,.bottle-3,.bottle-4,.bottle-5,.bottle-6{
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+}
+
+.bottle-1-bg{
+  background-color:#d69366;
+}
+.bottle-item{
+  overflow:hidden;
+}
+.bottle-item:hover{
+
+}
+
+.bottle-title{
+
+}
+
+.hover-img{
+  width:100%;
+  /* transform:translateY(90%); */
+  position:absolute;
+  background:url(../a.png);
+  background-size:cover;
+  display:flex;
+  justify-content:center;
+  /* padding-top:40px; */
+  background-position:center;
+  background-repeat: no-repeat;
+  opacity:0;
+  transition: 500ms ease-in-out;
+}
+.hover-title{
+  position:absolute;
+  top:20;
+  padding-top:30px;
+  font-size:32px;
+  letter-spacing: .1em;
+  font-family:"Freudian Two Demo";
+}
+.bottle-item:hover .hover-img{
+  opacity:.93;
+  /* animation:slide 600ms ease-in-out; */
+}
+.description{
+  font-size:20px;
+  letter-spacing:.09em;
+}
+.bdr-primary{
+  border:1px solid #d69366;
+}
+@keyframes slide{
+  0%   {transform:translateY(900);}
+  100% {transform:translateY(0%);}
+}
+
+.footer-links{
+  list-style-type: none;
+}
+.footer-links li {
+  padding-bottom:10px; 
+}
+.footer-links li a{
+  font-size:20px;
+  padding-bottom:10px;
+  letter-spacing:.1em;
+  color:#d69366;
+}
+
+.bg-nav{
+  background:#fff9f6;
+}
+
+.type-title{
+  font-size:30px !important;
+}
+.about-title{
+  font-size:45px;
+}
+@media(max-width:425px){
+  .about-title{
+    font-size:30px;
+  }
+}
+.text-container{
+  margin:auto;
+}
+@media(max-width:425px){
+  .text-container{
+    margin:10px;
+  }
+}
+
+.loading-wrapper{
+  width:100vw;
+  height:100vh;
+  position:fixed;
+  z-index:9999;
+  background:#262626;
+  color:#d69366;
+
+}
+.loading-wrapper h5{
+  font-size:35px;
+}
+.pace {
+  pointer-events: none;
+  user-select: none;
+  z-index: 2000;
+  position: fixed;
+  margin: auto;
+  top: 50%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 300px;
+  border: 0px;
+  height: 4px;
+  overflow: hidden;
+  background:transparent;
+}
+
+.pace .pace-progress {
+  box-sizing: border-box;
+  transform: translate3d(0, 0, 0);
+  max-width: 400px;
+  position: fixed;
+  z-index: 2000;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 100%;
+  height: 100%;
+  width: 100%;
+  background: #d69366;
+}
+
+.pace.pace-inactive {
+  display: none;
+}
