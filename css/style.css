@@ -22,6 +22,10 @@
   font-family:"Zawgyi One";
   src:url(../fonts/ZawgyiOne2008.woff);
 }
+@font-face{
+  font-family:"Myanmar Sans Pro";
+  src:url(../fonts/MyanmarSansPro-Regular.woff);
+}
 
 .text-white{
   color:#f4f4f4 !important;
@@ -44,12 +48,32 @@ body{
 }
 
 .main-title{
-  color:#d69366 !important;
+  /* color:#d69366 !important; */
   letter-spacing:.1em;
   font-family: serif;
   font-size:100px;
   font-weight:bold;
   text-transform:uppercase;
+}
+.hero-text-col{
+  background:#d69366;
+  color:#fff;
+}
+.photo-col{
+   background:url(../img/Final/HRS\ \(3\).jpg);
+  background-size:cover;
+  background-position:bottom;
+  background-repeat:no-repeat;
+  height:100vh;
+  width:100%;
+  overflow:hidden;
+}
+.photo-col-overlay{
+  width:50vw;
+  position: absolute;
+  height:100vh;
+  background:#d69366;
+  opacity:.2;
 }
 @media(max-width:425px){
   .main-title{
@@ -76,7 +100,7 @@ body{
   height:130vh;
   background:#262626;
   position:absolute;
-  opacity:.5;
+  opacity:.9;
 }
 
 .mm-font{
@@ -155,12 +179,31 @@ body{
 }
 .bdr-primary{
   border:1px solid #d69366;
+  border-radius:20px;
+  padding:10px;
+}
+
+.bdr-lft{
+  border-right:1px solid #d69366;
+  height:250px;
 }
 @keyframes slide{
   0%   {transform:translateY(900);}
   100% {transform:translateY(0%);}
 }
-
+.smooth-card:hover,.strong-card:hover{
+  background:#d69366;
+  color:#262626;
+}
+.smooth-card-alc{
+  color:#d69366;
+}
+.smooth-card:hover .smooth-card-alc{
+  color:#262626;
+}
+.strong-card:hover .smooth-card-alc{
+  color:#262626;
+}
 .footer-links{
   list-style-type: none;
 }
@@ -240,6 +283,15 @@ body{
   height: 100%;
   width: 100%;
   background: #d69366;
+}
+
+.mm-font{
+  font-family:"Myanmar Sans Pro" !important;
+  letter-spacing:.1em;
+}
+
+.bg-img-col{
+  background:url()
 }
 
 .pace.pace-inactive {

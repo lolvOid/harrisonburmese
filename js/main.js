@@ -19,6 +19,12 @@
 //     ease: Expo.easeInOut
 //     })
 // })
+TweenMax.from("#main-title", 1, {
+  delay: 1,
+  scale:1,
+  opacity: 0,
+  ease: Expo.easeInOut
+  })
 $(document).ready(function(){
   TweenMax.to("#loading", 1, {
     delay: 1,
@@ -26,14 +32,26 @@ $(document).ready(function(){
     ease: Expo.easeInOut
     })
     console.log('done');
+    TweenMax.to("#main-title", 1, {
+      delay: 1,
+      scale:1,
+      opacity: 1,
+      ease: Expo.easeInOut
+      })
 $('body').removeClass('position-fixed');
 })
 // Pace.on('done', function() {
       
  
 // });
+$('.slider-bottles').slick({
+  autoplay:true,
+  arrow:false,
 
+});
 $('.tilt-test').tilt({
   scale: 1.2 ,
-
+})
+$('.strong-card').tilt({
+  scale: 1.2 ,
 })
