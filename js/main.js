@@ -46,12 +46,12 @@ $('body').removeClass('position-fixed');
 // });
 $('.slider-bottles').slick({
   autoplay:true,
-  arrow:false,
-
+  arrows:false,
+  dots:false,
 });
 $('.tilt-test').tilt({
   scale: 1.2 ,
-})
+});
 $('.strong-card').tilt({
   scale: 1.2 ,
-})
+});
