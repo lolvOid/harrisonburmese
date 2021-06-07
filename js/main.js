@@ -26,7 +26,7 @@ $('body').waitForImages(function() {
         $('#loading').remove();
         $('body').removeClass('position-fixed');
     })
-  }, 2300)
+  }, 500)
 });
 
 
