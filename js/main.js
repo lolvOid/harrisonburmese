@@ -19,31 +19,37 @@
 //     ease: Expo.easeInOut
 //     })
 // })
-TweenMax.from("#main-title", 1, {
-  delay: 1,
-  scale:1,
-  opacity: 0,
-  ease: Expo.easeInOut
-  })
-$(document).ready(function(){
-  TweenMax.to("#loading", 1, {
-    delay: 1,
-    opacity: 0,
-    ease: Expo.easeInOut
-    })
-    console.log('done');
-    TweenMax.to("#main-title", 1, {
+$('body').waitForImages(function() {
+    // All descendant images have loaded, now slide up.
+    TweenMax.to("#loading", 1, {
       delay: 1,
-      scale:1,
-      opacity: 1,
+      opacity: 0,
       ease: Expo.easeInOut
       })
-$('body').removeClass('position-fixed');
-})
+      console.log('done');
+      TweenMax.to("#main-title", 1, {
+        delay: 1,
+        scale:1,
+        opacity: 1,
+        ease: Expo.easeInOut
+        })
+  $('body').removeClass('position-fixed');
+});
+// TweenMax.from("#main-title", 1, {
+//   delay: 1,
+//   scale:1,
+//   opacity: 0,
+//   ease: Expo.easeInOut
+//   })
+// $(document).ready(function(){
+ 
+// })
 // Pace.on('done', function() {
       
  
 // });
+
+
 $('.slider-bottles').slick({
   autoplay:true,
   arrows:false,
