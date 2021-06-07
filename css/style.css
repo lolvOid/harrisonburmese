@@ -1,6 +1,6 @@
 @font-face{
   font-family:"AGENCYB";
-  src:url(../fonts/AGENCYB.WOFF);
+  src:url(../fonts/AGENCYB.woff);
 }
 @font-face{
   font-family:"Heidenberg";
@@ -93,6 +93,9 @@ body{
   font-size:3em;
   text-align:left;
 
+}
+.font-freud{
+  font-family:"Freudian Two Demo";
 }
 .text-overlay{
   /* width:100vw; */
