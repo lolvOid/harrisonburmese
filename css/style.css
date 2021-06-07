@@ -200,17 +200,26 @@ body{
   0%   {transform:translateY(900);}
   100% {transform:translateY(0%);}
 }
-.smooth-card:hover,.strong-card:hover{
+.smooth-card:hover{
+  background:#d69366;
+  color:#262626;
+}
+.strong-card:hover{
   background:#d69366;
   color:#262626;
 }
 .smooth-card-alc{
   color:#d69366;
 }
+.strong-card-alc{
+  color:#d69366;
+}
 .smooth-card:hover .smooth-card-alc{
   color:#262626;
 }
-
+.strong-card:hover .strong-card-alc{
+  color:#262626;
+}
 .footer-links{
   list-style-type: none;
 }
