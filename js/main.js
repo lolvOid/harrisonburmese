@@ -34,17 +34,24 @@
       anim = lottie.loadAnimation(params);
       lottie.stop();
 // $('body').waitForImages(function() {
-
-  Pace.on('done', function() {
+  paceOptions = {
+    ajax: false, // disabled
+    document: false, // disabled
+    eventLag: false, // disabled
+    elements: {
+        selectors: ['body']
+    }
+};
+  Pace.on('start', function() {
     lottie.play();
     setTimeout(() => {
         
       $('#loading').fadeOut("normal",function(){
-          $('#loading').remove();
           $('body').removeClass('position-fixed');
+          $('#loading').remove();
       })
     }, 3000)     
- 
+    Pace.stop();
   });
   
  
