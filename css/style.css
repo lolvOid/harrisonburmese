@@ -263,7 +263,7 @@ body{
   width:100vw;
   height:100vh;
   position:fixed;
-  z-index:999;
+  z-index:1000;
   background:#262626;
   color:#d69366;
 
