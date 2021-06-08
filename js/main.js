@@ -24,7 +24,7 @@
         var params = {
           container: document.getElementById('lottie'),
           renderer: 'svg',
-          loop: true,
+          loop:false,
           pause:true,
           autoplay: true,
           animationData: animationData
@@ -33,14 +33,17 @@
       var anim;
 
       anim = lottie.loadAnimation(params);
+      lottie.stop();
 $('body').waitForImages(function() {
-  setTimeout(() => {
 
+  lottie.play();
+  setTimeout(() => {
+      
     $('#loading').fadeOut("normal",function(){
         $('#loading').remove();
         $('body').removeClass('position-fixed');
     })
-  }, 2000)
+  }, 3000)
 });
 
 
