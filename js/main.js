@@ -70,11 +70,11 @@ var frame=0;
 $(document).ready(function() {
   lottie.play();
   setTimeout(() => {
-    $('#loading').slideUp("normal",function(){
+    $('#loading').fadeOut("normal",function(){
         $('body').removeClass('position-fixed');
         $('#loading').remove();
     })
-  }, 3500)  
+  }, 3800)  
   start() 
 });
 
