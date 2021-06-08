@@ -116,7 +116,7 @@ body{
   color:#fff;
   letter-spacing:.25em;
   font-family:"Freudian Two Demo";
-  font-size:3em;
+  font-size:30px;
   text-align:left;
 
 }
@@ -284,7 +284,9 @@ body{
     margin:10px;
   }
 }
-
+#box {
+  /* border: 1px solid red; */
+}
 .loading-wrapper{
   width:100vw;
   height:100vh;
@@ -293,6 +295,12 @@ body{
   background:#262626;
   color:#d69366;
 
+}
+
+@media(max-width:425px){
+  .sub-title{
+    font-size:30px;
+  }
 }
 .loading-wrapper h5{
   font-size:35px;

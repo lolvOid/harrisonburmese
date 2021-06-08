@@ -25,7 +25,7 @@
           renderer: 'svg',
           loop:false,
           autoplay: false,
-          path:"/js/HarrisonLoading.json",
+          path:"/js/HarrisonLoading2.json",
           
       };
 
@@ -70,7 +70,7 @@ var frame=0;
 $(document).ready(function() {
   lottie.play();
   setTimeout(() => {
-    $('#loading').fadeOut("normal",function(){
+    $('#loading').slideUp("normal",function(){
         $('body').removeClass('position-fixed');
         $('#loading').remove();
     })
