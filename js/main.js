@@ -25,8 +25,7 @@
           container: document.getElementById('lottie'),
           renderer: 'svg',
           loop:false,
-          pause:true,
-          autoplay: true,
+          autoplay: false,
           animationData: animationData
       };
 
