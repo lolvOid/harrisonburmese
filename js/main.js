@@ -42,17 +42,42 @@
 //         selectors: ['body']
 //     }
 // };
-  Pace.on('done', function() {
-    lottie.play();
-    setTimeout(() => {
-        
-      $('#loading').fadeOut("normal",function(){
-          $('body').removeClass('position-fixed');
-          $('#loading').remove();
-      })
-    }, 3000)     
-    // Pace.stop();
-  });
+var el = document.getElementById('anim');
+function play() {
+  el.style.animationPlayState = 'running';
+}
+function pause() {
+  el.style.animationPlayState = 'paused';
+}
+function reset() {
+  el.style.animation = 'none';
+  el.offsetHeight; /* trigger reflow to apply the change immediately */
+  el.style.animation = null;
+}
+function stop() {
+  reset();
+  pause();
+}
+$("body").waitForImages(function(){
+  $("#loader").attr("src", "img/bottleloading.gif");
+  setTimeout(() => {
+    $('#loading').fadeOut("normal",function(){
+        $('body').removeClass('position-fixed');
+        $('#loading').remove();
+    })
+  }, 3200)   
+});
+  // Pace.on('done', function() {
+  //   // lottie.play();
+  //   $("#loader").attr("src", "img/bottleloading.gif");
+  //   setTimeout(() => {
+  //     $('#loading').fadeOut("normal",function(){
+  //         $('body').removeClass('position-fixed');
+  //         $('#loading').remove();
+  //     })
+  //   }, 3200)     
+  //   // Pace.stop();
+  // });
   
  
 // });
