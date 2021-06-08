@@ -69,6 +69,23 @@ body{
     font-size:21px;
   }
 }
+.loader-gif{
+  background-image: url('img/loader.gif');
+  width: 250px;
+  height: 188px;
+  animation: anim 1.0s steps(10) infinite;
+}
+.pause {
+  animation-play-state: paused;
+}
+@keyframes anim {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 100%;
+  }
+}
 .hero-text-col{
   background:#d69366;
   color:#fff;
