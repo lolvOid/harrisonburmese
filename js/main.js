@@ -33,17 +33,22 @@
 
       anim = lottie.loadAnimation(params);
       lottie.stop();
-$('body').waitForImages(function() {
+// $('body').waitForImages(function() {
 
-  lottie.play();
-  setTimeout(() => {
-      
-    $('#loading').fadeOut("normal",function(){
-        $('#loading').remove();
-        $('body').removeClass('position-fixed');
-    })
-  }, 3000)
-});
+  Pace.on('done', function() {
+    lottie.play();
+    setTimeout(() => {
+        
+      $('#loading').fadeOut("normal",function(){
+          $('#loading').remove();
+          $('body').removeClass('position-fixed');
+      })
+    }, 3000)     
+ 
+  });
+  
+ 
+// });
 
 
 // TweenMax.from("#main-title", 1, {
@@ -55,10 +60,10 @@ $('body').waitForImages(function() {
 // $(document).ready(function(){
  
 // })
-// Pace.on('done', function() {
+Pace.on('done', function() {
       
  
-// });
+});
 
 
 $('.slider-bottles').slick({

@@ -263,7 +263,7 @@ body{
   width:100vw;
   height:100vh;
   position:fixed;
-  z-index:9999;
+  z-index:999;
   background:#262626;
   color:#d69366;
 
@@ -271,19 +271,21 @@ body{
 .loading-wrapper h5{
   font-size:35px;
 }
-.pace {
+/* .pace {
   pointer-events: none;
   user-select: none;
   z-index: 2000;
   position: fixed;
   margin: auto;
-  top: 50%;
+  top: 20%;
+  /* margin-bottom:30px; */
   left: 0;
   right: 0;
   bottom: 0;
   width: 300px;
   border: 0px;
-  height: 4px;
+  border-radius:30px;
+  height: 10px;
   overflow: hidden;
   background:transparent;
 }
@@ -301,7 +303,13 @@ body{
   height: 100%;
   width: 100%;
   background: #d69366;
+} */
+#preloader{
+
+  overflow:hidden;
+  transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
 }
+
 
 .mm-font{
   font-family:"Myanmar Sans Pro" !important;
