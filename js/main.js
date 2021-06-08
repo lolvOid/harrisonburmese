@@ -58,15 +58,56 @@ function stop() {
   reset();
   pause();
 }
-$("body").waitForImages(function(){
+// $("body").waitForImages(function(){
+
+//   $("#loader").attr("src", "img/bottleloading.gif");
+//   setTimeout(() => {
+//     $('#loading').fadeOut("normal",function(){
+//         $('body').removeClass('position-fixed');
+//         $('#loading').remove();
+//     })
+//   }, 3500)  
+//   start() 
+  
+// });
+
+paceOptions = {
+  ajax: false, // disabled
+  document: true, // enabled
+  eventLag: false, // disabled
+  elements: {
+    selectors: ['.my-page']
+  }
+};
+var frame=0;
+$(document).ready(function() {
   $("#loader").attr("src", "img/bottleloading.gif");
   setTimeout(() => {
     $('#loading').fadeOut("normal",function(){
         $('body').removeClass('position-fixed');
         $('#loading').remove();
     })
-  }, 3200)   
+  }, 3500)  
+  start() 
 });
+
+function start() {
+  var duration = 3200; // it should finish in 5 seconds !
+  var st = window.performance.now();
+  var val=0;
+  window.requestAnimationFrame(function step(time) {
+    var diff = Math.round(time - st),
+      val = Math.round(diff / duration * 100);
+    val = val > 100 ? 100 : val;
+    // $("#box").css("width", val + "px");
+    $("#box").text(val + "%");
+    if (diff < duration) {
+      window.requestAnimationFrame(step);
+    }
+  })
+}
+
+
   // Pace.on('done', function() {
   //   // lottie.play();
   //   $("#loader").attr("src", "img/bottleloading.gif");
