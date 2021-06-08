@@ -60,6 +60,15 @@ body{
   font-weight:bold;
   text-transform:uppercase;
 }
+.hero-desc{
+  font-size:34px;
+
+}
+@media(max-width:425px){
+  .hero-desc{
+    font-size:21px;
+  }
+}
 .hero-text-col{
   background:#d69366;
   color:#fff;
