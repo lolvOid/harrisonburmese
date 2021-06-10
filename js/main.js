@@ -125,7 +125,7 @@ $('.slider-bottles').slick({
   autoplay:true,
   arrows:false,
   dots:false,
-  infinite:false
+  infinite:true
 });
 $('.tilt-test').tilt({
   scale: 1.2 ,
