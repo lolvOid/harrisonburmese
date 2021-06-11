@@ -11,6 +11,19 @@
       lottie.stop();
 var frame=0;
 
+
+// $(document).on({
+//   ajaxStart: function() {  lottie.play();
+//     setTimeout(() => {
+//       $('#loading').fadeOut("normal",function(){
+//           $('body').removeClass('position-fixed');
+//           $('#loading').remove();
+//       })
+//     }, 3800) 
+//     start() },
+//   ajaxStop: function() {   }    
+// });
+
 $(document).ready(function() {
   lottie.play();
   setTimeout(() => {
@@ -44,10 +57,4 @@ $('.slider-bottles').slick({
   arrows:false,
   dots:false,
   infinite:true
-});
-$('.tilt-test').tilt({
-  scale: 1.2 ,
-});
-$('.strong-card').tilt({
-  scale: 1.2 ,
 });
