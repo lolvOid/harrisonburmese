@@ -1,17 +1,17 @@
+var params = {
+  container: document.getElementById('lottie'),
+  renderer: 'svg',
+  loop:false,
+  autoplay: false,
+  path:"/js/HarrisonLoading2.json",
+  
+};
+var anim;
+anim = lottie.loadAnimation(params);
+  // lottie.stop();
 
 $(document).ready(function() {
-  var params = {
-    container: document.getElementById('lottie'),
-    renderer: 'svg',
-    loop:false,
-    autoplay: false,
-    path:"/js/HarrisonLoading2.json",
-    
-  };
-  var anim;
-  anim = lottie.loadAnimation(params);
-    // lottie.stop();
-  
+
   lottie.play();
   setTimeout(() => {
     $('#loading').fadeOut("normal",function(){
