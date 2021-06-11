@@ -1,30 +1,17 @@
-       var params = {
-          container: document.getElementById('lottie'),
-          renderer: 'svg',
-          loop:false,
-          autoplay: false,
-          path:"/js/HarrisonLoading2.json",
-          
-      };
-      var anim;
-      anim = lottie.loadAnimation(params);
-      lottie.stop();
-var frame=0;
-
-
-// $(document).on({
-//   ajaxStart: function() {  lottie.play();
-//     setTimeout(() => {
-//       $('#loading').fadeOut("normal",function(){
-//           $('body').removeClass('position-fixed');
-//           $('#loading').remove();
-//       })
-//     }, 3800) 
-//     start() },
-//   ajaxStop: function() {   }    
-// });
 
 $(document).ready(function() {
+  var params = {
+    container: document.getElementById('lottie'),
+    renderer: 'svg',
+    loop:false,
+    autoplay: false,
+    path:"/js/HarrisonLoading2.json",
+    
+  };
+  var anim;
+  anim = lottie.loadAnimation(params);
+    // lottie.stop();
+  
   lottie.play();
   setTimeout(() => {
     $('#loading').fadeOut("normal",function(){
@@ -57,4 +44,7 @@ $('.slider-bottles').slick({
   arrows:false,
   dots:false,
   infinite:true
+});
+$("img[async-src]").each(function(index) {
+  $(this).attr("src", $(this).attr("async-src"));
 });
